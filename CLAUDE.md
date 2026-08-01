@@ -15,6 +15,6 @@ This is a static personal portfolio website. It consists of a single HTML page, 
 ## Development Commands
 As this is a static site without a build process or test suite, no specialized build or test commands are required.
 
-To preview the site locally, you can use a simple HTTP server:
-- Python 3: `python3 -m http.server`
-- Node.js: `npx serve .`
+To preview the site locally, use Python's built-in HTTP server:
+- Command: `python3 -m http.server`
+- Access the site at: `http://localhost:8000`
