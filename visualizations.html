@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="James Imbuido — Tableau and Power BI dashboards: COVID screener and Spotify streaming reports."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Visualizations — James Imbuido" />
+    <meta
+      property="og:description"
+      content="Tableau and Power BI dashboards — COVID screener and Spotify streaming. Open in the published tool, or read the build notes."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jimbuido08.github.io/visualizations.html" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FAFAFA'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Playfair Display, Georgia, serif' font-size='20' font-weight='600' fill='%231D1D1F'>J</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    />
+    <title>Visualizations — James Imbuido</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/mediaqueries.css" />
+    <script>
+      // No-flash theme bootstrap. Runs synchronously in <head> before paint.
+      // Resolves localStorage first, then prefers-color-scheme, then defaults to light.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="logo" href="/">James Imbuido</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/projects.html">Projects</a></li>
+          <li>
+            <a href="/visualizations.html" aria-current="page" class="nav-link--active">Visualizations</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ─── Visualizations (link cards) ──────────────────────── -->
+      <section id="visualizations" class="section reveal">
+        <p class="eyebrow">Visualizations</p>
+        <h1 class="section__title">Dashboards.</h1>
+        <p class="section__lede">
+          Tableau and Power&nbsp;BI work — open in the published tool, or read
+          the build notes.
+        </p>
+        <ul class="viz-grid" role="list">
+          <li class="viz-card">
+            <figure class="viz-card__media" aria-hidden="true">
+              <svg
+                viewBox="0 0 320 200"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="COVID dashboard thumbnail"
+              >
+                <rect width="320" height="200" fill="var(--surface)" />
+                <g
+                  font-family="Inter, sans-serif"
+                  font-size="9"
+                  fill="var(--slate)"
+                >
+                  <rect
+                    x="30"
+                    y="40"
+                    width="260"
+                    height="14"
+                    fill="var(--accent-soft)"
+                    rx="2"
+                  />
+                  <rect
+                    x="30"
+                    y="60"
+                    width="180"
+                    height="14"
+                    fill="var(--accent-soft)"
+                    rx="2"
+                  />
+                  <polyline
+                    points="30,150 70,120 110,135 150,100 190,115 230,85 270,95"
+                    fill="none"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                  <circle cx="70" cy="120" r="2" fill="var(--accent)" />
+                  <circle cx="110" cy="135" r="2" fill="var(--accent)" />
+                  <circle cx="150" cy="100" r="2" fill="var(--accent)" />
+                  <circle cx="190" cy="115" r="2" fill="var(--accent)" />
+                  <circle cx="230" cy="85" r="2" fill="var(--accent)" />
+                  <circle cx="270" cy="95" r="2" fill="var(--accent)" />
+                </g>
+                <text
+                  x="30"
+                  y="190"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  fill="var(--slate)"
+                >
+                  Tableau · COVID screener
+                </text>
+              </svg>
+            </figure>
+            <div class="viz-card__body">
+              <h2 class="viz-card__title">COVID Screener Dashboard</h2>
+              <p class="viz-card__lede">
+                Tableau dashboard for symptom screening and case trends.
+              </p>
+              <div class="viz-card__actions">
+                <a
+                  class="btn btn--primary btn--sm"
+                  href="https://drive.google.com/file/d/1vKv5lOeMgkcSnWKXlMuSPwfZaNYq-JJA/view?usp=sharing"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Open dashboard
+                </a>
+                <a
+                  class="btn btn--ghost btn--sm"
+                  href="/assets/Information Sheet - Tableau CoVid Dashboard.pdf"
+                  target="_blank"
+                >
+                  Build notes
+                </a>
+              </div>
+            </div>
+          </li>
+          <li class="viz-card">
+            <figure class="viz-card__media" aria-hidden="true">
+              <svg
+                viewBox="0 0 320 200"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Spotify dashboard thumbnail"
+              >
+                <rect width="320" height="200" fill="var(--surface)" />
+                <g
+                  font-family="Inter, sans-serif"
+                  font-size="9"
+                  fill="var(--slate)"
+                >
+                  <rect
+                    x="40"
+                    y="150"
+                    width="22"
+                    height="20"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="70"
+                    y="120"
+                    width="22"
+                    height="50"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="100"
+                    y="100"
+                    width="22"
+                    height="70"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="130"
+                    y="80"
+                    width="22"
+                    height="90"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="160"
+                    y="60"
+                    width="22"
+                    height="110"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="190"
+                    y="90"
+                    width="22"
+                    height="80"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="220"
+                    y="110"
+                    width="22"
+                    height="60"
+                    fill="var(--accent)"
+                  />
+                  <rect
+                    x="250"
+                    y="130"
+                    width="22"
+                    height="40"
+                    fill="var(--accent)"
+                  />
+                </g>
+                <text
+                  x="40"
+                  y="190"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  fill="var(--slate)"
+                >
+                  Power BI · Spotify streaming
+                </text>
+              </svg>
+            </figure>
+            <div class="viz-card__body">
+              <h2 class="viz-card__title">Spotify Streaming Dashboard</h2>
+              <p class="viz-card__lede">
+                Power&nbsp;BI report on streaming behaviour and audio
+                features.
+              </p>
+              <div class="viz-card__actions">
+                <a
+                  class="btn btn--primary btn--sm"
+                  href="https://drive.google.com/file/d/1T6plyfbdcVoJ9gIxxCzTJUYkOnocPUEx/view?usp=sharing"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Open dashboard
+                </a>
+                <a
+                  class="btn btn--ghost btn--sm"
+                  href="/assets/Information Sheet - PowerBI Spotify Dashboard.pdf"
+                  target="_blank"
+                >
+                  Build notes
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 James Imbuido.</p>
+    </footer>
+
+    <script>
+      // Mark the document as JS-enhanced so the unfold CSS can hide by default.
+      // No-JS users see all content expanded (per prep doc D5).
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="/script.js" defer></script>
+
+    <!-- Cloudflare Web Analytics — beacon-only, no cookies, no banner.
+         To activate: get a token from https://dash.cloudflare.com →
+         Web Analytics → your site. The script below only loads when the
+         token has been set (a 32-char hex string). Leave the placeholder
+         in place to ship without analytics. -->
+    <script>
+      (function () {
+        var token = "PLACEHOLDER_TOKEN";
+        if (!token || token === "PLACEHOLDER_TOKEN" || !/^[a-f0-9]{32}$/i.test(token)) {
+          return;
+        }
+        var s = document.createElement("script");
+        s.defer = true;
+        s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        s.setAttribute("data-cf-beacon", token);
+        document.head.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>

@@ -4,7 +4,25 @@
       "Bash(npx --version)",
       "Bash(/opt/anaconda3/bin/python3 *)",
       "Bash(ruby -v)",
-      "Bash(php -v)"
+      "Bash(php -v)",
+      "Bash(npx skills *)",
+      "Bash(brew install *)",
+      "WebSearch",
+      "Bash(python3 -m http.server 8765)",
+      "Bash(curl -sI http://localhost:8765/)",
+      "Bash(curl -s -o /dev/null -w \"index.html: %{http_code} %{size_download}b\\\\n\" http://localhost:8765/)",
+      "Bash(curl -s -o /dev/null -w \"style.css:  %{http_code} %{size_download}b\\\\n\" http://localhost:8765/style.css)",
+      "Bash(curl -s -o /dev/null -w \"script.js:  %{http_code} %{size_download}b\\\\n\" http://localhost:8765/script.js)",
+      "Bash(curl -s -o /dev/null -w \"media:      %{http_code} %{size_download}b\\\\n\" http://localhost:8765/mediaqueries.css)",
+      "Bash(curl -s -o /dev/null -w \"cv pdf:     %{http_code} %{size_download}b\\\\n\" http://localhost:8765/assets/James%20Imbuido%20-%20CV.pdf)",
+      "Bash(python3 *)",
+      "Bash(kill %1)",
+      "Bash(wait)",
+      "Bash(node -c script.js)",
+      "Bash(node -e ' *)",
+      "Bash(curl *)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(pkill -f \"http.server 8765\")"
     ]
   }
 }

@@ -1,425 +1,379 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>James Imbuido</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <meta
+      name="description"
+      content="James Imbuido — Data Scientist and AI Engineer based in Victoria, Australia. Python, R, SQL, Tableau, Power BI."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="James Imbuido — Data Scientist & AI Engineer" />
+    <meta
+      property="og:description"
+      content="Data scientist and AI engineer with a clinical background. Python, R, SQL, Tableau, Power BI."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jimbuido08.github.io/" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FAFAFA'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Playfair Display, Georgia, serif' font-size='20' font-weight='600' fill='%231D1D1F'>J</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    />
+    <title>James Imbuido — Data Scientist & AI Engineer</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/mediaqueries.css" />
+    <script>
+      // No-flash theme bootstrap. Runs synchronously in <head> before paint.
+      // Resolves localStorage first, then prefers-color-scheme, then defaults to light.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">James Imbuido</div>
-      <div>
-        <ul class="nav-links">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="logo" href="/">James Imbuido</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/projects.html">Projects</a></li>
+          <li><a href="/visualizations.html">Visualizations</a></li>
+        </ul>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ─── Hero ─────────────────────────────────────────────── -->
+      <section id="hero" class="section section--hero reveal">
+        <p class="eyebrow">Australia</p>
+        <h1 class="hero__title">James Imbuido</h1>
+        <p class="hero__role">Data Scientist &amp; Engineer</p>
+        <p class="hero__tagline">
+          Python and R for analysis, Tableau and Power&nbsp;BI for delivery —
+          and a habit of checking the numbers twice.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="/assets/James Imbuido - CV.pdf" download>
+            Download CV
+          </a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+        <ul class="hero__sub-nav" role="list" aria-label="Jump to section">
           <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">James Imbuido</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+      </section>
+
+      <!-- ─── About ────────────────────────────────────────────── -->
+      <section id="about" class="section reveal">
+        <p class="eyebrow">About</p>
+        <h2 class="section__title">From the ward to the workspace.</h2>
+        <div class="about__body">
+          <p>
+            I'm James Imbuido, a Data Scientist and AI Engineer based in Victoria,
+            Australia. I build in Python and R, ship dashboards in Tableau and
+            Power&nbsp;BI, and I don't trust a number until I've checked it
+            twice.
+          </p>
+          <p>
+            Before this I worked for four years as a Registered Nurse in
+            Victorian hospitals — most recently as a mental-health case manager
+            in Maroondah, and earlier through pediatric oncology and ICU
+            rotations at Dandenong Hospital, where I learned to synthesize
+            clinical data across teams and act on it under precision pressure.
+            I'm an MSc Data Science graduate (Distinction), and I'm currently
+            an Associate Data Scientist at Commonwealth Bank — designing
+            activity-linking pipelines and shipping GenFolio into production
+            across the AI Powered Engineering stream.
+          </p>
         </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic.jfif" alt="James Imbuido's profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">James Imbuido</h1>
-        <p class="section__text__p2"> Aspiring Data Scientist</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            onclick="window.open('./assets/James Imbuido - CV.pdf')"
-          >
-            Download CV
-          </button>
-          <button class="btn btn-color-2" onclick="location.href='#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://linkedin.com/in/jamesimbuido/'"
-          />
-          <img
-            src="./assets/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/jimbuido08'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./assets/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Grades</h3>
-              <p>Distinction Average</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./assets/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>BSc of Nursing<br />MSc in Data Science</p>
-            </div>
+        <dl class="about__stats" aria-label="Credentials at a glance">
+          <div class="stat">
+            <dt>MSc Data Science</dt>
+            <dd>Distinction</dd>
           </div>
-          <div class="text-container">
-            <p> Combining my nursing expertise with data science skills, I tackle problems with a data-driven approach, optimizing efficiency and impact. As a highly motivated team player with a strong work ethic, I consistently deliver results, always willing to go the extra mile.
+          <div class="stat">
+            <dt>BSc Nursing</dt>
+            <dd>Registered (AHPRA)</dd>
+          </div>
+          <div class="stat">
+            <dt>Clinical years</dt>
+            <dd>4+</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- ─── Skills ───────────────────────────────────────────── -->
+      <section id="skills" class="section reveal">
+        <p class="eyebrow">Skills</p>
+        <h2 class="section__title">What I work with.</h2>
+        <ul class="skills" role="list">
+          <li class="skill">
+            <h3 class="skill__name">Python</h3>
+            <p class="skill__context">Pandas, scikit-learn, model evaluation.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">R</h3>
+            <p class="skill__context"tidyverse, caret, statistical modelling.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">SQL</h3>
+            <p class="skill__context">Relational queries, joins, aggregations.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">TypeScript</h3>
+            <p class="skill__context">Next.Js, React, frontend & backend.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">Agentic AI systems</h3>
+            <p class="skill__context">Framework selection, evaluation pipelines, production rollout.</p>
+            <ul class="skill__stack" role="list">
+              <li>LangGraph · LiteLLM · Portkey</li>
+              <li>Pydantic AI · HoneyHive</li>
+              <li>Claude Code · GitHub Copilot · Microsoft Copilot</li>
+            </ul>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">Tableau</h3>
+            <p class="skill__context">Interactive dashboards, parameter actions.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">Power&nbsp;BI</h3>
+            <p class="skill__context">DAX, model relationships, report publishing.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">Data modelling</h3>
+            <p class="skill__context">Feature selection, evaluation, comparison.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ─── Experience ───────────────────────────────────────── -->
+      <section id="experience" class="section reveal">
+        <p class="eyebrow">Experience</p>
+        <h2 class="section__title">Where I've been.</h2>
+        <ol class="experience" role="list">
+          <li class="experience__item">
+            <p class="experience__period">Feb 2025 – Present · 1 yr 7 mos</p>
+            <h3 class="experience__role">Commonwealth Bank of Australia</h3>
+            <p class="experience__where">Full-time · Hybrid · AIPE &amp; GenFolio</p>
+            <div class="experience__sub-roles">
+              <div class="experience__sub-role">
+                <h4 class="experience__sub-role-title">Associate Data Scientist</h4>
+                <p class="experience__sub-period">Feb 2026 – Present · Melbourne, VIC</p>
+                <ul class="experience__streams" role="list">
+                  <li class="experience__stream">
+                    <span class="experience__stream-name">Technical Delivery &amp; System Architecture</span>
+                    <ul class="experience__stream-bullets" role="list">
+                      <li>Designed a five-stage activity-linking pipeline with weighted Jaccard similarity, automatically connecting related work across GitHub and Jira; agent orchestration via LangGraph.</li>
+                      <li>Routed multi-model calls through LiteLLM and Portkey to manage provider fallbacks and cost across Claude models on AWS Bedrock.</li>
+                      <li>Implemented citation verification using Levenshtein distance to prevent hallucinations in AI-generated documentation.</li>
+                      <li>Delivered a v1-to-v2 schema migration across database, API routes, TypeScript types, and 20+ test files with zero data loss.</li>
+                    </ul>
+                  </li>
+                  <li class="experience__stream">
+                    <span class="experience__stream-name">Platform Leadership &amp; Production Delivery</span>
+                    <ul class="experience__stream-bullets" role="list">
+                      <li>Delivered GenFolio's first-ever production deployment on AWS; served as pilot lead across two PFR releases, adapting to a Temporal architecture and UI pivot.</li>
+                      <li>Ran a structured evaluation experiment with 3 engineering managers across 10+ activities using HoneyHive, achieving ~60% agreement and establishing team-wide quality standards.</li>
+                      <li>Shipped Pydantic-typed tool contracts to give agents validated, well-scoped interfaces with the underlying systems.</li>
+                    </ul>
+                  </li>
+                  <li class="experience__stream">
+                    <span class="experience__stream-name">AI Adoption &amp; Community</span>
+                    <ul class="experience__stream-bullets" role="list">
+                      <li>Initiated and delivered CBA's Claude Code Beginner Workshops — 2,000+ participants across Melbourne, Sydney, and Perth; ran Melbourne independently.</li>
+                      <li>Used GitHub Copilot and Claude Code daily for engineering work; ran internal brown-bags on prompt patterns and reviewer workflows for Microsoft Copilot users.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="experience__sub-role">
+                <h4 class="experience__sub-role-title">Graduate Data Scientist</h4>
+                <p class="experience__sub-period">Feb 2025 – Feb 2026 · Australia</p>
+                <ul class="experience__streams" role="list">
+                  <li class="experience__stream">
+                    <span class="experience__stream-name">Hackathon25! Collabor(A.I.)te &amp; Innovate | GenFolio</span>
+                    <ul class="experience__stream-bullets" role="list">
+                      <li>Came 1st in CBA's first company-wide hackathon, competing against 260+ teams across Australia and India.</li>
+                      <li>Post-hack, deliberated with multiple internal groups on how to scale and productionise the product; secured exclusive executive sponsorship from the group's CIO for Technology.</li>
+                    </ul>
+                  </li>
+                  <li class="experience__stream">
+                    <span class="experience__stream-name">Rotation 2 | AIPE Management (GenFolio) Stream</span>
+                    <ul class="experience__stream-bullets" role="list">
+                      <li>Key developer and DS productionising GenFolio for the Engineering Practice; deployed the MVP to production within 3 months and ran multiple pilot groups for continuous testing and improvement.</li>
+                      <li>Provided DS support to AIPE and mentored for the NSW VET programme.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="experience__item">
+            <p class="experience__period">2024 – Present</p>
+            <h3 class="experience__role">Data Science (MSc, Distinction)</h3>
+            <p class="experience__where">Swinburne University of Technology</p>
+            <p class="experience__detail">
+              Capstones in classification and customer analytics. Distinction
+              average.
             </p>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Programming Languages</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>R</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SQL</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Other Technologies</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>MATLAB</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Hadoop</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PySpark</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Tableau</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SAS</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PowerBI</h3>
-                  <p id="white-out">Experienced</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Browse My Notable</p>
-      <h1 class="title">Projects</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-1.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">[Python] Machine Learning with Passwords</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://www.kaggle.com/jamesimbuido/james-imbuido-password-creator-and-evaluator')"
-              >
-                Kaggle
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Information Sheet - Python Password Creator and Evaluator.pdf')"
-              >
-                Information (PDF)
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-2.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">[R] Bank Customer Churn Prediction</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://www.kaggle.com/code/jamesimbuido/notebook1f5c850e25', '_blank')"
-                >
-                Kaggle
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Information Sheet - R Bank Customer Churn.pdf')"
-              >
-              Information (PDF)
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">[TABLEAU] Covid Screener Dashboard</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://drive.google.com/file/d/1vKv5lOeMgkcSnWKXlMuSPwfZaNYq-JJA/view?usp=sharing')"
+          </li>
+          <li class="experience__item">
+            <p class="experience__period">2021 – 2024</p>
+            <h3 class="experience__role">Registered Nurse — Mental Health</h3>
+            <p class="experience__where">Eastern Health, Maroondah</p>
+            <p class="experience__detail">
+              Case management for acute mental-health patients. Synthesised
+              clinical data across multidisciplinary teams under precision
+              pressure.
+            </p>
+          </li>
+          <li class="experience__item">
+            <p class="experience__period">2019 – 2021</p>
+            <h3 class="experience__role">Registered Nurse — Paediatric Oncology &amp; ICU</h3>
+            <p class="experience__where">Dandenong Hospital, Monash Health</p>
+            <p class="experience__detail">
+              Rotations through high-acuity wards. Acted on rapidly changing
+              data points with limited margin for error.
+            </p>
+          </li>
+        </ol>
+      </section>
 
-              >
-                Download (Google Drive)
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Information Sheet - Tableau CoVid Dashboard.pdf')"
-              >
-              Information (PDF)
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-4.png"
-                alt="Project 4"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">[PowerBI] Spotify Dashboard</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('https://drive.google.com/file/d/1T6plyfbdcVoJ9gIxxCzTJUYkOnocPUEx/view?usp=sharing')"
-              >
-              Download (Google Drive)
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="window.open('./assets/Information Sheet - PowerBI Spotify Dashboard.pdf')"
-              >
-              Information (PDF)
-              </button>
-            </div>
-          </div>
+      <!-- ─── Contact ──────────────────────────────────────────── -->
+      <section id="contact" class="section section--contact reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="section__title">Let's talk.</h2>
+        <p class="section__lede">
+          Currently at Commonwealth Bank — happy to chat about AI engineering,
+          GenAI systems, or future opportunities.
+        </p>
+        <ul class="contact-list" role="list">
+          <li>
+            <a href="mailto:jtb9029@protonmail.com">
+              <span class="contact-list__label">Email</span>
+              <span class="contact-list__value">jtb9029@protonmail.com</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jamesimbuido/"
+              rel="noopener"
+              target="_blank"
+            >
+              <span class="contact-list__label">LinkedIn</span>
+              <span class="contact-list__value">/in/jamesimbuido</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/jimbuido08"
+              rel="noopener"
+              target="_blank"
+            >
+              <span class="contact-list__label">GitHub</span>
+              <span class="contact-list__value">@jimbuido08</span>
+            </a>
+          </li>
+          <li>
+            <a href="/assets/James Imbuido - CV.pdf" download>
+              <span class="contact-list__label">CV</span>
+              <span class="contact-list__value">Download PDF</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
 
-          
-        </div>
-      </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./assets/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p><a href="mailto:jtb9029@protonmail.com">jtb9029@protonmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./assets/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/jamesimbuido/" target="_blank">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2024 James Imbuido. All Rights Reserved.</p>
+    <footer class="site-footer">
+      <p>© 2026 James Imbuido.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <script>
+      // Mark the document as JS-enhanced so the unfold CSS can hide by default.
+      // No-JS users see all content expanded (per prep doc D5).
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="/script.js" defer></script>
+
+    <!-- Cloudflare Web Analytics — beacon-only, no cookies, no banner.
+         To activate: get a token from https://dash.cloudflare.com →
+         Web Analytics → your site. The script below only loads when the
+         token has been set (a 32-char hex string). Leave the placeholder
+         in place to ship without analytics. -->
+    <script>
+      (function () {
+        var token = "PLACEHOLDER_TOKEN";
+        if (!token || token === "PLACEHOLDER_TOKEN" || !/^[a-f0-9]{32}$/i.test(token)) {
+          return;
+        }
+        var s = document.createElement("script");
+        s.defer = true;
+        s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        s.setAttribute("data-cf-beacon", token);
+        document.head.appendChild(s);
+      })();
+    </script>
   </body>
 </html>

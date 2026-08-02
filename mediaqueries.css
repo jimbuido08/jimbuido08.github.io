@@ -1,103 +1,92 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
+/* ==========================================================================
+   Alabaster & Ink — responsive overrides
+   --------------------------------------------------------------------------
+   Mobile-first base styles live in style.css. This file holds the breakpoint
+   rules where layout meaningfully changes (single-column, mobile nav, smaller
+   type, etc.).
+   ========================================================================== */
+
+
+/* ≤ 1200px — compact desktop: drop side padding further, tighten hero ─── */
+
+@media (max-width: 1200px) {
+  .section--hero {
+    min-height: auto;
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
   }
-  .about-containers {
-    flex-wrap: wrap;
-  }
-  #contact,
-  #projects {
-    height: fit-content;
+
+  .about__stats {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
-  #experience,
-  .experience-details-container {
-    margin-top: 2rem;
-  }
-  #profile,
-  .section-container {
-    display: block;
-  }
-  .arrow {
-    display: none;
-  }
-  section,
-  .section-container {
-    height: fit-content;
-  }
-  section {
-    margin: 0 5%;
-  }
-  .section__pic-container {
-    width: 275px;
-    height: 275px;
-    margin: 0 auto 2rem;
-  }
-  .about-containers {
-    margin-top: 0;
-  }
-}
 
-@media screen and (max-width: 600px) {
-  #contact,
-  footer {
-    height: 40vh;
-  }
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
-  article {
-    font-size: 1rem;
-  }
-  footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-  }
-  .about-containers,
-  .contact-info-upper-container,
-  .btn-container {
+/* ≤ 900px — mobile nav, single-column grid ──────────────────────────── */
+
+@media (max-width: 900px) {
+  .site-nav {
     flex-wrap: wrap;
+    gap: var(--space-2);
   }
-  .contact-info-container {
-    margin: 0;
-  }
-  .contact-info-container p,
-  .nav-links li a {
-    font-size: 1rem;
-  }
-  .experience-sub-title {
-    font-size: 1.25rem;
-  }
-  .logo {
-    font-size: 1.5rem;
-  }
+
   .nav-links {
+    order: 3;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: var(--space-2);
+  }
+
+  .nav-links a { font-size: var(--fs-caption); }
+
+  .project-grid,
+  .viz-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about__stats {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* ≤ 600px — small phone: tighter spacing, larger tap targets ────────── */
+
+@media (max-width: 600px) {
+  :root {
+    --section-y: clamp(3rem, 8vh, 5rem);
+  }
+
+  .site-nav {
+    padding: var(--space-1) var(--space-3);
+  }
+
+  .logo { font-size: 1.1rem; }
+
+  .hero__cta,
+  .project-card__actions,
+  .viz-card__actions,
+  .contact-list {
     flex-direction: column;
-    gap: 0.5rem;
-    text-align: center;
+    align-items: stretch;
   }
-  .section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
+
+  .btn { width: 100%; }
+
+  .contact-list a { width: 100%; }
+
+  .about__stats {
+    grid-template-columns: 1fr;
   }
-  .section__text__p2 {
-    font-size: 1.25rem;
-  }
-  .title {
-    font-size: 2rem;
-  }
-  .text-container {
-    text-align: justify;
-  }
+
+  .skill { padding: var(--space-2); }
+}
+
+
+/* ≤ 380px — narrowest phone: shrink display type a touch ────────────── */
+
+@media (max-width: 380px) {
+  .hero__title { font-size: 2.5rem; }
+  .section__title { font-size: 1.75rem; }
 }
