@@ -14,6 +14,7 @@
     min-height: auto;
     padding-top: var(--space-6);
     padding-bottom: var(--space-6);
+    gap: var(--space-6);
   }
 
   .about__stats {
@@ -41,12 +42,25 @@
   .nav-links a { font-size: var(--fs-caption); }
 
   .project-grid,
-  .viz-grid {
+  .viz-grid,
+  .skills {
     grid-template-columns: 1fr;
   }
 
+  .section--hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .hero__portrait { justify-self: center; }
+  .hero__portrait img { max-width: 280px; }
+
   .about__stats {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -66,21 +80,24 @@
 
   .hero__cta,
   .project-card__actions,
-  .viz-card__actions,
-  .contact-list {
+  .viz-card__actions {
     flex-direction: column;
     align-items: stretch;
   }
 
   .btn { width: 100%; }
 
-  .contact-list a { width: 100%; }
+  .hero__portrait img { max-width: 240px; }
 
   .about__stats {
     grid-template-columns: 1fr;
   }
 
   .skill { padding: var(--space-2); }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -89,4 +106,5 @@
 @media (max-width: 380px) {
   .hero__title { font-size: 2.5rem; }
   .section__title { font-size: 1.75rem; }
+  .hero__portrait img { max-width: 200px; }
 }

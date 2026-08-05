@@ -103,25 +103,38 @@
     <main id="main">
       <!-- ─── Hero ─────────────────────────────────────────────── -->
       <section id="hero" class="section section--hero reveal">
-        <p class="eyebrow">Australia</p>
-        <h1 class="hero__title">James Imbuido</h1>
-        <p class="hero__role">Data Scientist &amp; Engineer</p>
-        <p class="hero__tagline">
-          Python and R for analysis, Tableau and Power&nbsp;BI for delivery —
-          and a habit of checking the numbers twice.
-        </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="/assets/James Imbuido - CV.pdf" download>
-            Download CV
-          </a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        <div class="hero__content">
+          <p class="eyebrow">Australia</p>
+          <h1 class="hero__title">James Imbuido</h1>
+          <p class="hero__role">Data Scientist &amp; Engineer</p>
+          <p class="hero__tagline">
+            Python and R for analysis, agentic AI engineering for what comes next,
+            Tableau and Power&nbsp;BI for delivery — and a habit of checking the numbers twice.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="/assets/James Imbuido - CV.pdf" download>
+              Download CV
+            </a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+          <ul class="hero__sub-nav" role="list" aria-label="Jump to section">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        <ul class="hero__sub-nav" role="list" aria-label="Jump to section">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+
+        <figure class="hero__portrait" aria-label="Portrait of James Imbuido">
+          <img
+            src="/assets/profile-pic.jfif"
+            alt="James Imbuido"
+            width="640"
+            height="640"
+            loading="eager"
+            decoding="async"
+          />
+        </figure>
       </section>
 
       <!-- ─── About ────────────────────────────────────────────── -->
@@ -142,9 +155,10 @@
             rotations at Dandenong Hospital, where I learned to synthesize
             clinical data across teams and act on it under precision pressure.
             I'm an MSc Data Science graduate (Distinction), and I'm currently
-            an Associate Data Scientist at Commonwealth Bank — designing
-            activity-linking pipelines and shipping GenFolio into production
-            across the AI Powered Engineering stream.
+            an Associate Data Scientist at Commonwealth Bank — applying
+            Agentic AI Engineering across the AI Powered Engineering
+            (AIPE) stream to design activity-linking pipelines and ship
+            GenFolio into production.
           </p>
         </div>
         <dl class="about__stats" aria-label="Credentials at a glance">
@@ -174,7 +188,7 @@
           </li>
           <li class="skill">
             <h3 class="skill__name">R</h3>
-            <p class="skill__context"tidyverse, caret, statistical modelling.</p>
+            <p class="skill__context">tidyverse, caret, statistical inference.</p>
           </li>
           <li class="skill">
             <h3 class="skill__name">SQL</h3>
@@ -182,16 +196,15 @@
           </li>
           <li class="skill">
             <h3 class="skill__name">TypeScript</h3>
-            <p class="skill__context">Next.Js, React, frontend & backend.</p>
+            <p class="skill__context">Next.js, React, frontend and backend.</p>
           </li>
           <li class="skill">
-            <h3 class="skill__name">Agentic AI systems</h3>
-            <p class="skill__context">Framework selection, evaluation pipelines, production rollout.</p>
-            <ul class="skill__stack" role="list">
-              <li>LangGraph · LiteLLM · Portkey</li>
-              <li>Pydantic AI · HoneyHive</li>
-              <li>Claude Code · GitHub Copilot · Microsoft Copilot</li>
-            </ul>
+            <h3 class="skill__name">Statistics</h3>
+            <p class="skill__context">Hypothesis testing, regression, experimental design.</p>
+          </li>
+          <li class="skill">
+            <h3 class="skill__name">Data modelling</h3>
+            <p class="skill__context">Feature selection, evaluation, comparison.</p>
           </li>
           <li class="skill">
             <h3 class="skill__name">Tableau</h3>
@@ -202,8 +215,18 @@
             <p class="skill__context">DAX, model relationships, report publishing.</p>
           </li>
           <li class="skill">
-            <h3 class="skill__name">Data modelling</h3>
-            <p class="skill__context">Feature selection, evaluation, comparison.</p>
+            <h3 class="skill__name">Agentic AI systems</h3>
+            <p class="skill__context">Framework selection, evaluation, production rollout.</p>
+            <ul class="skill__stack" role="list">
+              <li>LangGraph</li>
+              <li>LiteLLM</li>
+              <li>Portkey</li>
+              <li>Pydantic AI</li>
+              <li>HoneyHive</li>
+              <li>Claude Code</li>
+              <li>GitHub Copilot</li>
+              <li>Microsoft Copilot</li>
+            </ul>
           </li>
         </ul>
       </section>
