@@ -41,7 +41,7 @@
 
   .nav-links a { font-size: var(--fs-caption); }
 
-  .project-grid,
+  .ai-grid,
   .viz-grid,
   .skills {
     grid-template-columns: 1fr;
@@ -79,7 +79,7 @@
   .logo { font-size: 1.1rem; }
 
   .hero__cta,
-  .project-card__actions,
+  .ai-card__actions,
   .viz-card__actions {
     flex-direction: column;
     align-items: stretch;

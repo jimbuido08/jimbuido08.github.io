@@ -136,7 +136,7 @@
       btn.addEventListener("click", function () { togglePanel(btn); });
     });
 
-    // Deep-link support: #unfold-passwords or #unfold-churn opens on load.
+    // Deep-link support: #unfold-ai-passwords or #unfold-ai-churn opens on load.
     if (location.hash) {
       var match = location.hash.match(/^#unfold-(.+)$/);
       if (match) {
@@ -165,7 +165,7 @@
   function initFilter() {
     var chips = document.querySelectorAll("[data-filter]");
     var cards = document.querySelectorAll("[data-skills]");
-    var empty = document.getElementById("project-grid-empty");
+    var empty = document.getElementById("ai-grid-empty");
     var clearChip = document.querySelector('[data-filter="clear"]');
     if (!chips.length || !cards.length) return;
 

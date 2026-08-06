@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="James Imbuido — traditional AI work: classifier comparisons in Python and R, with case studies and information sheets."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Traditional AI — James Imbuido" />
+    <meta
+      property="og:description"
+      content="Two classifiers-comparison case studies: Python password strength and R bank customer churn. Each with a short case study."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jimbuido08.github.io/traditional-ai.html" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FAFAFA'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Playfair Display, Georgia, serif' font-size='20' font-weight='600' fill='%231D1D1F'>J</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    />
+    <title>Traditional AI — James Imbuido</title>
+    <link rel="stylesheet" href="/style.css?v=2" />
+    <link rel="stylesheet" href="/mediaqueries.css?v=2" />
+    <script>
+      // No-flash theme bootstrap. Runs synchronously in <head> before paint.
+      // Resolves localStorage first, then prefers-color-scheme, then defaults to light.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="logo" href="/">James Imbuido</a>
+        <ul class="nav-links" role="list">
+          <li>
+            <a href="/traditional-ai.html" aria-current="page" class="nav-link--active">Traditional AI</a>
+          </li>
+          <li><a href="/visualizations.html">Visualizations</a></li>
+        </ul>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ─── Traditional AI (2 case studies) ──────────────────────── -->
+      <section id="traditional-ai" class="section reveal">
+        <p class="eyebrow">Traditional AI</p>
+        <h1 class="section__title">Modelling work</h1>
+        <p class="section__lede">
+          Two classifiers-comparison case studies. Each has a short case study
+          below the card.
+        </p>
+
+        <div class="ai-filter" role="group" aria-label="Filter case studies by skill">
+          <p class="ai-filter__label">Filter by skill:</p>
+          <ul class="ai-filter__chips" role="list">
+            <li>
+              <button
+                type="button"
+                class="chip"
+                data-filter="python"
+                aria-pressed="false"
+              >
+                Python
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="chip"
+                data-filter="r"
+                aria-pressed="false"
+              >
+                R
+              </button>
+            </li>
+            <li>
+              <button
+                type="button"
+                class="chip chip--clear"
+                data-filter="clear"
+                aria-pressed="false"
+              >
+                Clear
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="ai-grid" role="list">
+          <li
+            class="ai-card"
+            data-skills="python"
+            id="ai-passwords"
+          >
+            <figure class="ai-card__media" aria-hidden="true">
+              <!-- Inline SVG: confusion matrix thumbnail -->
+              <svg
+                viewBox="0 0 320 200"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Confusion matrix thumbnail"
+              >
+                <rect width="320" height="200" fill="var(--surface)" />
+                <g transform="translate(60 30)">
+                  <rect width="90" height="60" fill="var(--ink)" />
+                  <rect x="110" width="90" height="60" fill="var(--accent-soft)" />
+                  <rect y="80" width="90" height="60" fill="var(--accent-soft)" />
+                  <rect x="110" y="80" width="90" height="60" fill="var(--ink)" />
+                  <text
+                    x="45"
+                    y="36"
+                    text-anchor="middle"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    fill="var(--alabaster)"
+                    font-weight="500"
+                  >
+                    TP
+                  </text>
+                  <text
+                    x="155"
+                    y="36"
+                    text-anchor="middle"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    fill="var(--ink)"
+                    font-weight="500"
+                  >
+                    FP
+                  </text>
+                  <text
+                    x="45"
+                    y="116"
+                    text-anchor="middle"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    fill="var(--ink)"
+                    font-weight="500"
+                  >
+                    FN
+                  </text>
+                  <text
+                    x="155"
+                    y="116"
+                    text-anchor="middle"
+                    font-family="Inter, sans-serif"
+                    font-size="11"
+                    fill="var(--alabaster)"
+                    font-weight="500"
+                  >
+                    TN
+                  </text>
+                </g>
+                <text
+                  x="60"
+                  y="180"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  fill="var(--slate)"
+                >
+                </text>
+              </svg>
+            </figure>
+            <div class="ai-card__body">
+              <p class="ai-card__tagline">
+                <em>Build a shield instead of reacting to a breach.</em>
+              </p>
+              <h2 class="ai-card__title">
+                [Python] Password Strength Classifier
+              </h2>
+              <p class="ai-card__lede">
+                Move from "looks hard" to "scores hard" — classify weak
+                passwords before a breach exposes them.
+              </p>
+              <div class="ai-card__actions">
+                <a
+                  class="btn btn--primary btn--sm"
+                  href="https://www.kaggle.com/jamesimbuido/james-imbuido-password-creator-and-evaluator"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Open on Kaggle
+                </a>
+                <a
+                  class="btn btn--ghost btn--sm"
+                  href="/assets/Information Sheet - Python Password Creator and Evaluator.pdf"
+                  target="_blank"
+                >
+                  Information sheet
+                </a>
+                <button
+                  type="button"
+                  class="unfold-btn"
+                  data-unfold-target="unfold-ai-passwords"
+                  aria-expanded="false"
+                  aria-controls="unfold-ai-passwords"
+                >
+                  Read case study
+                  <span class="unfold-btn__icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+              <div
+                class="unfold"
+                id="unfold-ai-passwords"
+                role="region"
+                aria-label="Password classifier case study"
+              >
+                <div class="unfold__inner">
+                  <dl class="unfold__grid">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Password security was long treated as length +
+                        complexity. Brute-force and modern cracking have made
+                        that no longer enough — can a model classify whether a
+                        password is actually weak before a breach exposes it?
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Technical edge</dt>
+                      <dd>
+                        Three classifiers (Logistic Regression, SVM, Naïve
+                        Bayes) trained on the Bhavik Bansal Kaggle corpus and
+                        grid-searched per algorithm. Naïve Bayes is not an
+                        obvious pick for text-shaped input — keeping it in the
+                        comparison, rather than reaching for a transformer, is
+                        the explicit constraint-then-test move.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Win</dt>
+                      <dd>
+                        Evaluation uses the full classification report
+                        (accuracy, precision, recall, F1) and a confusion
+                        matrix — not a single headline number. Pick-the-best-by-F1,
+                        not pick-the-best-by-acc, is the discipline that
+                        distinguishes the notebook from a tutorial.
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li
+            class="ai-card"
+            data-skills="r"
+            id="ai-churn"
+          >
+            <figure class="ai-card__media" aria-hidden="true">
+              <!-- Inline SVG: coefficient plot thumbnail -->
+              <svg
+                viewBox="0 0 320 200"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Coefficient plot thumbnail"
+              >
+                <rect width="320" height="200" fill="var(--surface)" />
+                <line
+                  x1="40"
+                  y1="20"
+                  x2="40"
+                  y2="180"
+                  stroke="var(--rule)"
+                  stroke-width="1"
+                />
+                <line
+                  x1="40"
+                  y1="100"
+                  x2="300"
+                  y2="100"
+                  stroke="var(--slate)"
+                  stroke-width="1"
+                  stroke-dasharray="2 2"
+                />
+                <g
+                  font-family="Inter, sans-serif"
+                  font-size="9"
+                  fill="var(--slate)"
+                >
+                  <line
+                    x1="120"
+                    y1="40"
+                    x2="220"
+                    y2="40"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                  <circle cx="170" cy="40" r="3" fill="var(--accent)" />
+                  <text x="225" y="44">Age</text>
+                  <line
+                    x1="80"
+                    y1="70"
+                    x2="180"
+                    y2="70"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                  <circle cx="130" cy="70" r="3" fill="var(--accent)" />
+                  <text x="185" y="74">Balance</text>
+                  <line
+                    x1="60"
+                    y1="100"
+                    x2="170"
+                    y2="100"
+                    stroke="var(--ink)"
+                    stroke-width="2"
+                  />
+                  <circle cx="115" cy="100" r="3" fill="var(--ink)" />
+                  <text x="175" y="104">Tenure</text>
+                  <line
+                    x1="140"
+                    y1="130"
+                    x2="240"
+                    y2="130"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                  <circle cx="190" cy="130" r="3" fill="var(--accent)" />
+                  <text x="245" y="134">Geography</text>
+                  <line
+                    x1="100"
+                    y1="160"
+                    x2="200"
+                    y2="160"
+                    stroke="var(--accent)"
+                    stroke-width="2"
+                  />
+                  <circle cx="150" cy="160" r="3" fill="var(--accent)" />
+                  <text x="205" y="164">Activity</text>
+                </g>
+                <text
+                  x="40"
+                  y="194"
+                  font-family="Inter, sans-serif"
+                  font-size="10"
+                  fill="var(--slate)"
+                >
+                </text>
+              </svg>
+            </figure>
+            <div class="ai-card__body">
+              <p class="ai-card__tagline">
+                <em>Retain is cheaper than acquire.</em>
+              </p>
+              <h2 class="ai-card__title">
+                [R] Bank Customer Churn Prediction
+              </h2>
+              <p class="ai-card__lede">
+                Demographics and account activity, with geography added as a
+                spatial variable — does it shift the picture?
+              </p>
+              <div class="ai-card__actions">
+                <a
+                  class="btn btn--primary btn--sm"
+                  href="https://www.kaggle.com/code/jamesimbuido/notebook1f5c850e25"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  Open on Kaggle
+                </a>
+                <a
+                  class="btn btn--ghost btn--sm"
+                  href="/assets/Information Sheet - R Bank Customer Churn.pdf"
+                  target="_blank"
+                >
+                  Information sheet
+                </a>
+                <button
+                  type="button"
+                  class="unfold-btn"
+                  data-unfold-target="unfold-ai-churn"
+                  aria-expanded="false"
+                  aria-controls="unfold-ai-churn"
+                >
+                  Read case study
+                  <span class="unfold-btn__icon" aria-hidden="true">+</span>
+                </button>
+              </div>
+              <div
+                class="unfold"
+                id="unfold-ai-churn"
+                role="region"
+                aria-label="Bank churn case study"
+              >
+                <div class="unfold__inner">
+                  <dl class="unfold__grid">
+                    <div>
+                      <dt>Challenge</dt>
+                      <dd>
+                        Banks usually model churn from demographics + account
+                        activity. This project keeps those — and asks whether
+                        adding <em>geography</em> (country) as a spatial
+                        variable changes the picture.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Technical edge</dt>
+                      <dd>
+                        Four classifiers (Logistic Regression, SVM, Random
+                        Forest, Naïve Bayes) on the Gaurav Topre Kaggle
+                        dataset. <code>customer_id</code> was excluded from
+                        feature variables with an explicit rationale — the
+                        kind of modelling hygiene employers notice in
+                        interviews more than in portfolios. Evaluation is
+                        three-way: coefficient plot, confusion matrix, ROC
+                        curve.
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>Win</dt>
+                      <dd>
+                        Breadth-and-discipline rather than a headline
+                        accuracy: multiple models compared with paired
+                        metrics (coefficient plot + CM + ROC), and a
+                        deliberate feature-set decision rather than a default
+                        one.
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <p class="ai-grid__empty" id="ai-grid-empty" hidden>
+          No case studies match these filters.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 James Imbuido</p>
+    </footer>
+
+    <script>
+      // Mark the document as JS-enhanced so the unfold CSS can hide by default.
+      // No-JS users see all content expanded (per prep doc D5).
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="/script.js" defer></script>
+
+    <!-- Cloudflare Web Analytics — beacon-only, no cookies, no banner.
+         To activate: get a token from https://dash.cloudflare.com →
+         Web Analytics → your site. The script below only loads when the
+         token has been set (a 32-char hex string). Leave the placeholder
+         in place to ship without analytics. -->
+    <script>
+      (function () {
+        var token = "PLACEHOLDER_TOKEN";
+        if (!token || token === "PLACEHOLDER_TOKEN" || !/^[a-f0-9]{32}$/i.test(token)) {
+          return;
+        }
+        var s = document.createElement("script");
+        s.defer = true;
+        s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        s.setAttribute("data-cf-beacon", token);
+        document.head.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
