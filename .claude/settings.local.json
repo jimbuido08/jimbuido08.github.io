@@ -23,7 +23,10 @@
       "Bash(echo \"exit: $?\")",
       "Bash(pkill -f \"http.server 8765\")",
       "Bash(netstat -ano)",
-      "Bash(awk '{print $5}')"
+      "Bash(awk '{print $5}')",
+      "Bash(echo \"PID: $!\")",
+      "Bash(kill 12725)",
+      "Bash(echo \"---exit: $?\")"
     ]
   }
 }

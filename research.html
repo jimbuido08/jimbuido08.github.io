@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Research projects and papers from James Imbuido."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:title" content="Research — James Imbuido" />
+    <meta
+      property="og:description"
+      content="Research projects and papers from James Imbuido."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jimbuido08.github.io/research.html" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23FAFAFA'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Playfair Display, Georgia, serif' font-size='20' font-weight='600' fill='%231D1D1F'>J</text></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+    />
+    <title>Research — James Imbuido</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/mediaqueries.css" />
+    <script>
+      // No-flash theme bootstrap. Runs synchronously in <head> before paint.
+      // Resolves localStorage first, then prefers-color-scheme, then defaults to light.
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme =
+            stored ||
+            (window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a class="logo" href="/">James Imbuido</a>
+        <ul class="nav-links" role="list">
+          <li><a href="/traditional-ai.html">Traditional AI</a></li>
+          <li><a href="/gen-ai.html">Gen AI</a></li>
+          <li><a href="/visualizations.html">Visualizations</a></li>
+          <li>
+            <a href="/research.html" aria-current="page" class="nav-link--active">Research</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Toggle dark mode"
+          aria-pressed="false"
+        >
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--sun"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+          </svg>
+          <svg
+            class="theme-toggle__icon theme-toggle__icon--moon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+          </svg>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main">
+      <!-- ─── Research ─────────────────────────────────────────── -->
+      <section id="research" class="section reveal">
+        <p class="eyebrow">Research</p>
+        <h1 class="section__title">Research work</h1>
+        <p class="section__lede">
+          Research projects and papers. Each card below has a short case
+          study you can open.
+        </p>
+
+        <ul class="project-grid" role="list"></ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 James Imbuido.</p>
+    </footer>
+
+    <script>
+      // Mark the document as JS-enhanced so the unfold CSS can hide by default.
+      // No-JS users see all content expanded (per prep doc D5).
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="/script.js" defer></script>
+
+    <!-- Cloudflare Web Analytics — beacon-only, no cookies, no banner.
+         To activate: get a token from https://dash.cloudflare.com →
+         Web Analytics → your site. The script below only loads when the
+         token has been set (a 32-char hex string). Leave the placeholder
+         in place to ship without analytics. -->
+    <script>
+      (function () {
+        var token = "PLACEHOLDER_TOKEN";
+        if (!token || token === "PLACEHOLDER_TOKEN" || !/^[a-f0-9]{32}$/i.test(token)) {
+          return;
+        }
+        var s = document.createElement("script");
+        s.defer = true;
+        s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+        s.setAttribute("data-cf-beacon", token);
+        document.head.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
