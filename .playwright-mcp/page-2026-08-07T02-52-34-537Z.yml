@@ -1,0 +1,185 @@
+- generic [active] [ref=f1e1]:
+  - link "Skip to content" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e3]:
+    - navigation "Primary" [ref=f1e4]:
+      - link "James Imbuido" [ref=f1e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=f1e6]:
+        - listitem [ref=f1e7]:
+          - link "Traditional AI" [ref=f1e8] [cursor=pointer]:
+            - /url: /traditional-ai.html
+        - listitem [ref=f1e9]:
+          - link "Gen AI" [ref=f1e10] [cursor=pointer]:
+            - /url: /gen-ai.html
+        - listitem [ref=f1e11]:
+          - link "Visualizations" [ref=f1e12] [cursor=pointer]:
+            - /url: /visualizations.html
+        - listitem [ref=f1e13]:
+          - link "Research" [ref=f1e14] [cursor=pointer]:
+            - /url: /research.html
+      - button "Toggle dark mode" [ref=f1e15] [cursor=pointer]
+  - main [ref=f1e19]:
+    - generic [ref=f1e20]:
+      - generic [ref=f1e21]:
+        - paragraph [ref=f1e22]: Australia
+        - heading "James Imbuido" [level=1] [ref=f1e23]
+        - paragraph [ref=f1e24]: Data Scientist & Engineer
+        - paragraph [ref=f1e25]: Python and R for analysis, Tableau and Power BI for delivery — and a habit of checking the numbers twice.
+        - generic [ref=f1e26]:
+          - link "Download CV" [ref=f1e27] [cursor=pointer]:
+            - /url: /assets/James Imbuido - CV.pdf
+          - link "Get in touch" [ref=f1e28] [cursor=pointer]:
+            - /url: "#contact"
+        - list "Jump to section" [ref=f1e29]:
+          - listitem [ref=f1e30]:
+            - link "About" [ref=f1e31] [cursor=pointer]:
+              - /url: "#about"
+          - listitem [ref=f1e32]:
+            - text: ·
+            - link "Skills" [ref=f1e33] [cursor=pointer]:
+              - /url: "#skills"
+          - listitem [ref=f1e34]:
+            - text: ·
+            - link "Experience" [ref=f1e35] [cursor=pointer]:
+              - /url: "#experience"
+          - listitem [ref=f1e36]:
+            - text: ·
+            - link "Contact" [ref=f1e37] [cursor=pointer]:
+              - /url: "#contact"
+      - figure [ref=f1e38]
+    - generic [ref=f1e39]:
+      - paragraph [ref=f1e40]: About
+      - heading "From the ward to the workspace." [level=2] [ref=f1e41]
+      - generic [ref=f1e42]:
+        - paragraph [ref=f1e43]: I'm James Imbuido, a Data Scientist and AI Engineer based in Victoria, Australia. I build in Python and R, ship dashboards in Tableau and Power BI, and I don't trust a number until I've checked it twice.
+        - paragraph [ref=f1e44]: Before this I worked for four years as a Registered Nurse in Victorian hospitals — most recently as a mental-health case manager in Maroondah, and earlier through pediatric oncology and ICU rotations at Dandenong Hospital, where I learned to synthesize clinical data across teams and act on it under precision pressure. I'm an MSc Data Science graduate (Distinction), and I'm currently an Associate Data Scientist at Commonwealth Bank — designing activity-linking pipelines and shipping GenFolio into production across the AI Powered Engineering stream.
+      - generic "Credentials at a glance" [ref=f1e45]:
+        - generic [ref=f1e46]:
+          - term [ref=f1e47]: MSc Data Science
+          - definition [ref=f1e48]: Distinction
+        - generic [ref=f1e49]:
+          - term [ref=f1e50]: BSc Nursing
+          - definition [ref=f1e51]: Registered (AHPRA)
+        - generic [ref=f1e52]:
+          - term [ref=f1e53]: Clinical years
+          - definition [ref=f1e54]: 4+
+    - generic [ref=f1e55]:
+      - paragraph [ref=f1e56]: Skills
+      - heading "What I work with." [level=2] [ref=f1e57]
+      - list [ref=f1e58]:
+        - listitem [ref=f1e59]:
+          - heading "Python" [level=3] [ref=f1e60]
+          - paragraph [ref=f1e61]: Pandas, scikit-learn, model evaluation.
+        - listitem [ref=f1e62]:
+          - heading "R" [level=3] [ref=f1e63]
+          - paragraph
+        - listitem [ref=f1e64]:
+          - heading "SQL" [level=3] [ref=f1e65]
+          - paragraph [ref=f1e66]: Relational queries, joins, aggregations.
+        - listitem [ref=f1e67]:
+          - heading "TypeScript" [level=3] [ref=f1e68]
+          - paragraph [ref=f1e69]: Next.Js, React, frontend & backend.
+        - listitem [ref=f1e70]:
+          - heading "Agentic AI systems" [level=3] [ref=f1e71]
+          - paragraph [ref=f1e72]: Framework selection, evaluation pipelines, production rollout.
+          - list [ref=f1e73]:
+            - listitem [ref=f1e74]: LangGraph · LiteLLM · Portkey
+            - listitem [ref=f1e75]: Pydantic AI · HoneyHive
+            - listitem [ref=f1e76]: Claude Code · GitHub Copilot · Microsoft Copilot
+        - listitem [ref=f1e77]:
+          - heading "Tableau" [level=3] [ref=f1e78]
+          - paragraph [ref=f1e79]: Interactive dashboards, parameter actions.
+        - listitem [ref=f1e80]:
+          - heading "Power BI" [level=3] [ref=f1e81]
+          - paragraph [ref=f1e82]: DAX, model relationships, report publishing.
+        - listitem [ref=f1e83]:
+          - heading "Data modelling" [level=3] [ref=f1e84]
+          - paragraph [ref=f1e85]: Feature selection, evaluation, comparison.
+    - generic [ref=f1e86]:
+      - paragraph [ref=f1e87]: Experience
+      - heading "Where I've been." [level=2] [ref=f1e88]
+      - list [ref=f1e89]:
+        - listitem [ref=f1e90]:
+          - paragraph [ref=f1e91]: Feb 2025 – Present · 1 yr 7 mos
+          - heading "Commonwealth Bank of Australia" [level=3] [ref=f1e92]
+          - paragraph [ref=f1e93]: Full-time · Hybrid · AIPE & GenFolio
+          - generic [ref=f1e94]:
+            - generic [ref=f1e95]:
+              - heading "Associate Data Scientist" [level=4] [ref=f1e96]
+              - paragraph [ref=f1e97]: Feb 2026 – Present · Melbourne, VIC
+              - list [ref=f1e98]:
+                - listitem [ref=f1e99]:
+                  - generic [ref=f1e100]: Technical Delivery & System Architecture
+                  - list [ref=f1e101]:
+                    - listitem [ref=f1e102]: Designed a five-stage activity-linking pipeline with weighted Jaccard similarity, automatically connecting related work across GitHub and Jira; agent orchestration via LangGraph.
+                    - listitem [ref=f1e103]: Routed multi-model calls through LiteLLM and Portkey to manage provider fallbacks and cost across Claude models on AWS Bedrock.
+                    - listitem [ref=f1e104]: Implemented citation verification using Levenshtein distance to prevent hallucinations in AI-generated documentation.
+                    - listitem [ref=f1e105]: Delivered a v1-to-v2 schema migration across database, API routes, TypeScript types, and 20+ test files with zero data loss.
+                - listitem [ref=f1e106]:
+                  - generic [ref=f1e107]: Platform Leadership & Production Delivery
+                  - list [ref=f1e108]:
+                    - listitem [ref=f1e109]: Delivered GenFolio's first-ever production deployment on AWS; served as pilot lead across two PFR releases, adapting to a Temporal architecture and UI pivot.
+                    - listitem [ref=f1e110]: Ran a structured evaluation experiment with 3 engineering managers across 10+ activities using HoneyHive, achieving ~60% agreement and establishing team-wide quality standards.
+                    - listitem [ref=f1e111]: Shipped Pydantic-typed tool contracts to give agents validated, well-scoped interfaces with the underlying systems.
+                - listitem [ref=f1e112]:
+                  - generic [ref=f1e113]: AI Adoption & Community
+                  - list [ref=f1e114]:
+                    - listitem [ref=f1e115]: Initiated and delivered CBA's Claude Code Beginner Workshops — 2,000+ participants across Melbourne, Sydney, and Perth; ran Melbourne independently.
+                    - listitem [ref=f1e116]: Used GitHub Copilot and Claude Code daily for engineering work; ran internal brown-bags on prompt patterns and reviewer workflows for Microsoft Copilot users.
+            - generic [ref=f1e117]:
+              - heading "Graduate Data Scientist" [level=4] [ref=f1e118]
+              - paragraph [ref=f1e119]: Feb 2025 – Feb 2026 · Australia
+              - list [ref=f1e120]:
+                - listitem [ref=f1e121]:
+                  - generic [ref=f1e122]: Hackathon25! Collabor(A.I.)te & Innovate | GenFolio
+                  - list [ref=f1e123]:
+                    - listitem [ref=f1e124]: Came 1st in CBA's first company-wide hackathon, competing against 260+ teams across Australia and India.
+                    - listitem [ref=f1e125]: Post-hack, deliberated with multiple internal groups on how to scale and productionise the product; secured exclusive executive sponsorship from the group's CIO for Technology.
+                - listitem [ref=f1e126]:
+                  - generic [ref=f1e127]: Rotation 2 | AIPE Management (GenFolio) Stream
+                  - list [ref=f1e128]:
+                    - listitem [ref=f1e129]: Key developer and DS productionising GenFolio for the Engineering Practice; deployed the MVP to production within 3 months and ran multiple pilot groups for continuous testing and improvement.
+                    - listitem [ref=f1e130]: Provided DS support to AIPE and mentored for the NSW VET programme.
+        - listitem [ref=f1e131]:
+          - paragraph [ref=f1e132]: 2024 – Present
+          - heading "Data Science (MSc, Distinction)" [level=3] [ref=f1e133]
+          - paragraph [ref=f1e134]: Swinburne University of Technology
+          - paragraph [ref=f1e135]: Capstones in classification and customer analytics. Distinction average.
+        - listitem [ref=f1e136]:
+          - paragraph [ref=f1e137]: 2021 – 2024
+          - heading "Registered Nurse — Mental Health" [level=3] [ref=f1e138]
+          - paragraph [ref=f1e139]: Eastern Health, Maroondah
+          - paragraph [ref=f1e140]: Case management for acute mental-health patients. Synthesised clinical data across multidisciplinary teams under precision pressure.
+        - listitem [ref=f1e141]:
+          - paragraph [ref=f1e142]: 2019 – 2021
+          - heading "Registered Nurse — Paediatric Oncology & ICU" [level=3] [ref=f1e143]
+          - paragraph [ref=f1e144]: Dandenong Hospital, Monash Health
+          - paragraph [ref=f1e145]: Rotations through high-acuity wards. Acted on rapidly changing data points with limited margin for error.
+    - generic [ref=f1e146]:
+      - paragraph [ref=f1e147]: Contact
+      - heading "Let's talk." [level=2] [ref=f1e148]
+      - paragraph [ref=f1e149]: Currently at Commonwealth Bank — happy to chat about AI engineering, GenAI systems, or future opportunities.
+      - list [ref=f1e150]:
+        - listitem [ref=f1e151]:
+          - link "Email jtb9029@protonmail.com" [ref=f1e152] [cursor=pointer]:
+            - /url: mailto:jtb9029@protonmail.com
+            - generic [ref=f1e153]: Email
+            - generic [ref=f1e154]: jtb9029@protonmail.com
+        - listitem [ref=f1e155]:
+          - link "LinkedIn /in/jamesimbuido" [ref=f1e156] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/jamesimbuido/
+            - generic [ref=f1e157]: LinkedIn
+            - generic [ref=f1e158]: /in/jamesimbuido
+        - listitem [ref=f1e159]:
+          - link "GitHub @jimbuido08" [ref=f1e160] [cursor=pointer]:
+            - /url: https://github.com/jimbuido08
+            - generic [ref=f1e161]: GitHub
+            - generic [ref=f1e162]: "@jimbuido08"
+        - listitem [ref=f1e163]:
+          - link "CV Download PDF" [ref=f1e164] [cursor=pointer]:
+            - /url: /assets/James Imbuido - CV.pdf
+            - generic [ref=f1e165]: CV
+            - generic [ref=f1e166]: Download PDF
+  - contentinfo [ref=f1e167]:
+    - paragraph [ref=f1e168]: © 2026 James Imbuido.

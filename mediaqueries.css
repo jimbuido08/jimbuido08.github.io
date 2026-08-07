@@ -41,9 +41,19 @@
 
   .nav-links a { font-size: var(--fs-caption); }
 
-  .ai-grid,
-  .viz-grid,
-  .skills {
+  /* Hero: stack portrait under the text so the name remains the first thing
+     users read on small screens. */
+  .section--hero {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+
+  .hero__portrait {
+    justify-self: center;
+  }
+
+  .project-grid,
+  .viz-grid {
     grid-template-columns: 1fr;
   }
 
