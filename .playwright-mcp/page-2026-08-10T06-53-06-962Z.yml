@@ -1,0 +1,53 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - navigation "Primary" [ref=e4]:
+      - link "James Imbuido" [ref=e5] [cursor=pointer]:
+        - /url: /
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link "Traditional AI" [ref=e8] [cursor=pointer]:
+            - /url: /traditional-ai.html
+        - listitem [ref=e9]:
+          - link "Gen AI" [ref=e10] [cursor=pointer]:
+            - /url: /gen-ai.html
+        - listitem [ref=e11]:
+          - link "Visualizations" [ref=e12] [cursor=pointer]:
+            - /url: /visualizations.html
+        - listitem [ref=e13]:
+          - link "Research" [ref=e14] [cursor=pointer]:
+            - /url: /research.html
+      - button "Toggle dark mode" [ref=e15] [cursor=pointer]
+  - main [ref=e19]:
+    - generic [ref=e20]:
+      - paragraph [ref=e21]: Visualizations
+      - heading "Dashboards" [level=1] [ref=e22]
+      - paragraph [ref=e23]: Tableau and Power BI work — open in the published tool, or read the build notes.
+      - list [ref=e24]:
+        - listitem [ref=e25]:
+          - figure [ref=e26]:
+            - img [ref=e27]:
+              - generic [ref=e39]: Tableau · COVID screener
+          - generic [ref=e40]:
+            - heading "COVID Screener Dashboard" [level=2] [ref=e41]
+            - paragraph [ref=e42]: Tableau dashboard for symptom screening and case trends.
+            - generic [ref=e43]:
+              - link "Download dashboard" [ref=e44] [cursor=pointer]:
+                - /url: /assets/James_Imbuido_CoVid_Screener.twbx
+              - link "Build notes" [ref=e45] [cursor=pointer]:
+                - /url: /assets/Information Sheet - Tableau CoVid Dashboard.pdf
+        - listitem [ref=e46]:
+          - figure [ref=e47]:
+            - img [ref=e48]:
+              - generic [ref=e59]: Power BI · Spotify streaming
+          - generic [ref=e60]:
+            - heading "Spotify Streaming Dashboard" [level=2] [ref=e61]
+            - paragraph [ref=e62]: Power BI report on streaming behaviour and audio features.
+            - generic [ref=e63]:
+              - link "Download dashboard" [ref=e64] [cursor=pointer]:
+                - /url: /assets/James_Imbuido_spotify_2023_dashboard.pbix
+              - link "Build notes" [ref=e65] [cursor=pointer]:
+                - /url: /assets/Information Sheet - PowerBI Spotify Dashboard.pdf
+  - contentinfo [ref=e66]:
+    - paragraph [ref=e67]: © 2026 James Imbuido
